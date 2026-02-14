@@ -20,10 +20,10 @@ class matr:
         return self.matrica
     def pov_ranga(matrica):
         mat = matrica
-        mat.append([1, 1, 1])
+        mat.append([1, 0, 0])
         mat[0], mat[1], mat[2] = mat[2], mat[0], mat[1]
-        mat[1].append(1)
-        mat[2].append(1)
+        mat[1].append(0)
+        mat[2].append(0)
         mat[1][0], mat[1][1], mat[1][2] = mat[1][2], mat[1][0], mat[1][1]
         mat[2][0], mat[2][1], mat[2][2] = mat[2][2], mat[2][0], mat[2][1]
         return mat
@@ -60,4 +60,5 @@ print(*ma,'\t',*mb,'\t',*mc, sep='\n')
 zero_matr = [[0]*3 for _ in range(3)]
 
 print('=' * 60, '\n', '3 действие: убем эти мтарицы')
+
 print(*zero_matr,'\t',*zero_matr,'\t',*zero_matr, sep='\n')
